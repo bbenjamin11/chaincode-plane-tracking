@@ -28,7 +28,7 @@ import (
 
 )
 
-const   PRODUCER = "FISHCO"
+const   PRODUCER = "SUPPLIER"
 const   SHIPPING = "SHIPPINGCO"
 const   RETAILER = "RETAILER"
 const 	CONSUMER = "CONSUMER"
