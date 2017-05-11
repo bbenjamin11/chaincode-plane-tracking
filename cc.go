@@ -195,10 +195,10 @@ func (t *SimpleChaincode) getAllBatches(stub  shim.ChaincodeStubInterface, user 
 			bAsBytes, err := stub.GetState(sb.Id)
 			var res1 Batch
 			err1 = json.Unmarshal(bAsBytes,&res1);
-			for j := bAsBytes{
+			for j := range res1.Transactions{
 				var _owner = res1.Transactions[j].Owner
 				if (user == _owner){
-					rab.Batches = append(rab.Batches,sb.Id); 
+					rab.Batches = append(rab.Batches,sb.Id);
 					break;
 				}
 
