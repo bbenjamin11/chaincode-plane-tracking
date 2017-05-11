@@ -615,7 +615,7 @@ func (t *SimpleChaincode) updateBatchQuality(stub shim.ChaincodeStubInterface, a
 // Containte function
 // ============================================================================================================================
 
-func contains(slice []string, item string) bool {
+func contains(slice [2]string, item string) bool {
     for _, s := range slice {
 		if(s==item){
 	    	return true
