@@ -192,15 +192,16 @@ func (t *SimpleChaincode) getAllBatches(stub  shim.ChaincodeStubInterface, user 
 		if(user == CERTIFIER) {
 			rab.Batches = append(rab.Batches,sb.Id);
 		}else{
-			bAsBytes, _err := stub.GetState(sb.Id)
+			bAsBytes, err := stub.GetState(sb.Id)
 			var res1 Batch
-			err = json.Unmarshal(bAsBytes, &res1)
-			for j := range res1.transactions{
-				var _owner = res1.transactions[j].owner
+			err1 = json.Unmarshal(bAsBytes,&res1);
+			for j := bAsBytes{
+				var _owner = res1.Transactions[j].Owner
 				if (user == _owner){
-					rab.Batches = append(rab.Batches,sb.Id);
+					rab.Batches = append(rab.Batches,sb.Id); 
 					break;
 				}
+
 			}
 		}
 
