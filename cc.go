@@ -28,7 +28,7 @@ import (
 
 )
 
-var   PRODUCER = [2] string {"SUPPLIER1","SUPPLIER2"}
+var   PRODUCER = [...] string {"SUPPLIER1","SUPPLIER2"}
 const   SHIPPING = "SHIPPINGCO"
 const   RETAILER = "RETAILER"
 const 	CONSUMER = "CONSUMER"
