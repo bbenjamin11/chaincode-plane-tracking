@@ -326,7 +326,7 @@ func (t *SimpleChaincode) createBatch(stub  shim.ChaincodeStubInterface, args []
 		return nil, errors.New("Incorrect number of arguments. Expecting 6")
 	}
 
-	if containt(PRODUCER,args[2]) {
+	if contains(PRODUCER,args[2]) {
 		fmt.Println("You are not allowed to create a new batch")
 		return nil, errors.New("You are not allowed to create a new batch")
 	}
