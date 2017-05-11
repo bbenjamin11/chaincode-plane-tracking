@@ -207,10 +207,8 @@ func (t *SimpleChaincode) getAllBatches(stub  shim.ChaincodeStubInterface, user 
 					rab.Batches = append(rab.Batches,sb.Id);
 					break;
 				}
-
 			}
 		}
-
 	}
 
 	rabAsBytes, _ := json.Marshal(rab)
