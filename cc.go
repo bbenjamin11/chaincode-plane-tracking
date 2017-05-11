@@ -28,7 +28,8 @@ import (
 
 )
 
-var   PRODUCER = [...] string {"SUPPLIER1","SUPPLIER2"}
+const   PRODUCER1 = "SUPPLIER1"
+const 	PRODUCER2 = "SUPPLIER2"
 const   SHIPPING = "SHIPPINGCO"
 const   RETAILER = "RETAILER"
 const 	CONSUMER = "CONSUMER"
@@ -326,7 +327,8 @@ func (t *SimpleChaincode) createBatch(stub  shim.ChaincodeStubInterface, args []
 		return nil, errors.New("Incorrect number of arguments. Expecting 6")
 	}
 
-	if !contains(PRODUCER,args[2]) {
+	
+	if (args[2] != PRODUCER1)&&(args[2] != PRODUCER2)  {
 		fmt.Println("You are not allowed to create a new batch")
 		return nil, errors.New("You are not allowed to create a new batch")
 	}
